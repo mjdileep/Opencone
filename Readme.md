@@ -7,6 +7,7 @@ A Pinecone alternative written on top of OpenSearch by simplifying features of O
 
 ### Python libraries 
     pip3 install opensearch-py
+    pip install opencone 
 
 ### Usage
 
