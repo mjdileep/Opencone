@@ -38,6 +38,7 @@ print("Index created in ", time.time()-t)
 titles = ["pp", "qq", "rr", "ss", "tt"]
 tags = ["p1", "p2", "p3", "p4", "p5"]
 vectors = []
+# Recommend to upsert 100 or less at a time
 for i in range(100):
     vectors.append((
         "id:"+str(i),
