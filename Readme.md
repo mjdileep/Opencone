@@ -2,7 +2,7 @@
 A Pinecone alternative written on top of OpenSearch by simplifying features of OpenSearch
 
 ### Requirements
-   * [OpenSearch Backend Service](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/) 
+   * [Install OpenSearch Backend](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/) 
    * or You can use a cloud hosted OpenSearch Backend
 
 ### Python libraries 
