@@ -11,7 +11,7 @@ A Pinecone alternative written on top of OpenSearch by simplifying features of O
 ### Usage
 
 ```python
-from src.opencone.opencone import OpenCone
+from opencone import OpenconeClient
 import random
 import numpy as np
 import time
@@ -32,7 +32,7 @@ client = OpenSearch(
             ssl_show_warn=False
         )
 
-oc = OpenCone(client=client)
+oc = OpenconeClient(client=client)
 
 # Create an index
 dimensions = 4096

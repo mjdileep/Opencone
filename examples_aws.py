@@ -1,4 +1,4 @@
-from src.opencone.opencone import OpenCone
+from opencone import OpenconeClient
 import random
 import numpy as np
 import time
@@ -22,7 +22,7 @@ client = OpenSearch(
 )
 
 
-oc = OpenCone(client=client)
+oc = OpenconeClient(client=client)
 
 # Create an index
 dimensions = 1024 # OpenSearch 2.7 for KNN with filtering only supports 1024 dimensions

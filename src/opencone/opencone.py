@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
 
-class OpenCone:
+class OpenconeClient:
     """
     OpenSearch wrapper for vector databases 
     """
