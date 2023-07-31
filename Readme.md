@@ -7,10 +7,10 @@ A Pinecone alternative written on top of OpenSearch by simplifying features of O
 
 ### Python libraries 
     pip3 install opensearch-py
-    pip install opencone 
+    pip3 install opencone 
 
 ### Usage
-
+#### Create an OpenconeClient
 ```python
 from opencone import OpenconeClient
 import random
@@ -34,7 +34,9 @@ client = OpenSearch(
         )
 
 oc = OpenconeClient(client=client)
-
+```
+#### Create an Index
+```python
 # Create an index
 dimensions = 4096
 t = time.time()
@@ -47,8 +49,11 @@ except Exception as ex:
     else:
         raise ex
 print("Index created in ", time.time()-t)
-
+```
+#### Upsert Vectors
+```python
 # Upsert vectors
+# [(<id>, <embeddings>, <metadata>),...]
 titles = ["pp", "qq", "rr", "ss", "tt"]
 tags = ["p1", "p2", "p3", "p4", "p5"]
 vectors = []
@@ -66,14 +71,19 @@ for i in range(100):
 t = time.time()
 oc.upsert(index_name="test", vectors=vectors)
 print("Upsert time:", time.time()-t)
-
+```
+#### Fetch Vector
+```python
 # Fetch vector
 print(oc.fetch(index_name="test", _id="id:1"))
-
+```
+#### Delete vector
+```python
 # Delete vector
 print(oc.delete(index_name="test", _id="id:1"))
-
-
+```
+#### Search 
+```python
 # Search
 filters = {
     "no": {"$gte":2200, "$lte":2800},
@@ -86,7 +96,9 @@ rs = oc.search(index_name="test", vector=(np.random.randint(5, size=dimensions)/
 print("Search time:", time.time()-t)
 for each in rs:
     print(each)
-
+```
+#### Delete an Index 
+```python
 # Delete index
 oc.delete_index(index_name="test")
 
