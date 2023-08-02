@@ -233,4 +233,9 @@ class OpenconeClient:
         )
         return results["hits"]["hits"]
 
-
+    def count(self, index_name: str):
+        """
+        :param index_name: Name of the index
+        :return: Number of elements
+        """
+        return self.client.count(index=index_name)
