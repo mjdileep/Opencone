@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "opencone"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Dileep Jayamal", email="dileep.jayamal@gmail.com" },
 ]
